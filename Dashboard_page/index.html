@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard To-Do</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="img/pikachu.jpeg" alt="Profile"/>
+        <h3>Sundar Gurung</h3>
+        <p>sundargurung360@gmail.com</p>
+      </div>
+      <nav>
+        <button class="active">📋 Dashboard</button>
+        <button>⚠️ Vital Task</button>
+        <button>✅ My Task</button>
+        <button>🗂️ Task Categories</button>
+        <button>⚙️ Settings</button>
+        <button>❓ Help</button>
+        <button class="logout">🔓 Logout</button>
+      </nav>
+    </aside>
+    <!-- Sidebar -->
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <input type="text" placeholder="Search your task here..." />
+        <div class="header-info">
+          <span class="date">Hari ini: <strong id="currentDate"></strong></span>
+          <button>🔔</button>
+          <button>📅</button>
+        </div>
+      </header>
+
+      <!-- Task Input -->
+      <section class="add-task">
+        <h3>➕ Add Task</h3>
+        <form id="taskForm">
+          <input type="text" id="taskTitle" placeholder="Task title" required />
+          <input type="text" id="taskDesc" placeholder="Task description" />
+          <select id="taskPriority">
+            <option value="Low">Low</option>
+            <option value="Moderate" selected>Moderate</option>
+            <option value="High">High</option>
+          </select>
+          <select id="taskStatus">
+            <option value="Not Started" selected>Not Started</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+          <input type="date" id="taskDate" />
+          <input type="url" id="taskImage" placeholder="Image URL (optional)" />
+          <button type="submit">Add Task</button>
+        </form>
+      </section>
+
+      <!-- Task Lists and Stats -->
+      <section class="dashboard">
+        <div class="task-section">
+          <h3>📋 To-Do</h3>
+          <div id="taskList" class="task-list"></div>
+        </div>
+        <div class="status-section">
+          <h3>📊 Task Status</h3>
+          <div id="statusSummary"></div>
+          <h4>✅ Completed Tasks</h4>
+          <div id="completedList" class="task-list"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

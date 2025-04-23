@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ff6b6b;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-container {
+  background-color: white;
+  width: 900px;
+  max-width: 100%;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.illustration {
+  flex: 1;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.illustration img {
+  height: 500px;
+  width: auto;
+  object-fit: contain;
+}
+.login-form {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.login-form h2 {
+  margin-bottom: 20px;
+}
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.login-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.login-form button {
+  padding: 12px;
+  border: none;
+  background-color: #ff6b6b;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.login-form button:hover {
+  background-color: #ff4a4a;
+}
+.redirect-text {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+.redirect-text a {
+  color: #007bff;
+  text-decoration: none;
+}
